@@ -2,6 +2,8 @@
 
 This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
+![](./design/desktop-preview.jpg)
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -30,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
-- Live Site URL: [Live site]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/interactive-rating-component-rqhk9kXLiV)
+- Live Site URL: [Live site](https://symphonious-mousse-7ace55.netlify.app/)
 
 ## My process
 

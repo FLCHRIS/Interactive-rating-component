@@ -1,135 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
-:root{
-    --Orange: hsl(25, 97%, 53%);
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+html {
+  font-size: 62.5%;
+}
 
-    --White: hsl(0, 0%, 100%);
-    --LightGrey: hsl(217, 12%, 63%);
-    --MediumGrey: hsl(216, 12%, 54%);
-    --DarkBlue: hsl(213, 19%, 18%);
-    --VeryDarkBlue: hsl(216, 12%, 8%);
+.main {
+  background-color: hsl(228deg, 11%, 8%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-family: "Overpass", sans-serif;
 }
-*{
-    margin: 0;
-    box-sizing: border-box;
+.main__card {
+  width: 90%;
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: hsl(215deg, 23%, 14%);
+  border-radius: 15px;
+  padding: 1.5em;
 }
-body{
-    font-family: 'Overpass', sans-serif;
-    font-size: 15px;
+.main__card .card__icon {
+  background-color: hsl(210deg, 21%, 16%);
+  padding: 0.8em;
+  border-radius: 50%;
+  margin-bottom: 2em;
+  transition: transform 0.3s ease;
 }
-.main{
-    background-color: var(--VeryDarkBlue);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.main__card .card__icon:hover {
+  transform: scale(1.1);
 }
-.container{
-    width: 330px;
-    background-color: var(--DarkBlue);
-    border-radius: 1rem;
-    box-shadow: 0px 0px 10px 0px var(--VeryDarkBlue);
+.main__card .card__title {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2.7rem;
 }
-.hero__img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 1.5rem;
-    padding: .5rem;
-    background-color: var(--VeryDarkBlue);
-    display: flex;
+.main__card .card__paragraph {
+  line-height: 1.3;
+  font-size: 1.5rem;
+  color: hsl(212deg, 11%, 53%);
+  margin: 1.5em 0;
 }
-.hero__img img{
-    width: 15px;
-    margin: auto;
-    margin-left: 5px;
+.main__card .card__container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.5em;
 }
-.hero__selected h1{
-    margin: 1.5rem 1.5rem .5rem;
-    color: var(--White);
-    font-size: 1.5rem;
-    font-weight: 700;
+.main__card .card__container .card__button {
+  cursor: pointer;
+  border: none;
+  background-color: hsl(210deg, 21%, 16%);
+  color: hsl(212deg, 11%, 53%);
+  font-size: 1.5rem;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  line-height: 2.6;
+  transition: background-color 0.3s, color 0.3s;
 }
-.hero__selected p{
-    margin: .5rem 1.5rem;
-    color: var(--LightGrey);
-    line-height: 20px;
-    font-size: .8rem;
-    font-weight: 400;
+.main__card .card__container .card__button:hover {
+  background-color: hsl(25deg, 100%, 52%);
+  color: hsl(0deg, 0%, 100%);
 }
-.hero__container{
-    margin: 1rem 1.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.main__card .card__container .card__button-selected {
+  background-color: hsl(212deg, 11%, 53%);
+  color: hsl(0deg, 0%, 100%);
 }
-.number{
-    color: var(--LightGrey);
-    font-weight: 700;
-    background-color: var(--VeryDarkBlue);
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 43px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color .5s, color .5s;
+.main__card .card__submit {
+  cursor: pointer;
+  margin: 1.5em 0 0;
+  background-color: hsl(25deg, 100%, 52%);
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  padding: 1em 0 0.6em;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
 }
-.number:hover{
-    background-color: var(--Orange);
-    color: var(--White);
+.main__card .card__submit:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 100%, 52%);
 }
-.hero__selected button{
-    width: 86%;
-    padding: .6rem;
-    background-color: var(--Orange);
-    border: none;
-    border-radius: 1rem;
-    color: var(--White);
-    font-family: inherit;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    font-size: .9rem;
-    margin: .5rem 1.5rem 1.5rem;
-    cursor: pointer;
-    transition: background-color .5s, color .5s;
+.main__thanks {
+  width: 90%;
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: hsl(215deg, 23%, 14%);
+  border-radius: 15px;
+  padding: 1.5em;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
-.hero__selected button:hover{
-    background-color: var(--White);
-    color: var(--Orange);
+.main__thanks .thanks__arrow {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: transform 0.3s ease-in-out;
 }
-.active{
-    background-color: var(--MediumGrey);
-    color: var(--White);
+.main__thanks .thanks__arrow img {
+  width: 25px;
 }
-.hero__thanks{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.main__thanks .thanks__arrow:hover {
+  transform: translateX(-5px);
 }
-.hero__thanks img{
-    margin: 2.5rem 0 1.5rem;
-    width: 150px;
+.main__thanks .thanks__img {
+  margin: 1em 0 1.5em;
 }
-.hero__thanks .selected{
-    margin: 1.5rem 0;
-    color: var(--Orange);
-    padding: .7rem 1rem;
-    font-size: 1rem;
-    border-radius: 1.3rem;
-    background-color: var(--VeryDarkBlue);
+.main__thanks .thanks__selected {
+  color: hsl(25deg, 100%, 52%);
+  background-color: hsl(210deg, 21%, 16%);
+  padding: 0.5em 1.5em 0.3em;
+  border-radius: 15px;
 }
-.hero__thanks h2{
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: var(--White);
-    margin: .5rem 0 1.5rem;
+.main__thanks .thanks__title {
+  margin: 1em 0 0.5em;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2.7rem;
 }
-.hero__thanks p{
-    text-align: center;
-    margin: 0 1.5rem 2.5rem;
-    color: var(--MediumGrey);
-    font-size: 1.1rem;
-}
+.main__thanks .thanks__paragraph {
+  color: hsl(212deg, 11%, 53%);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5em;
+}/*# sourceMappingURL=index.css.map */

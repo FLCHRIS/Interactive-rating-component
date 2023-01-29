@@ -5,44 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
   <title>Frontend Mentor | Interactive rating component</title>
 </head>
 <body>
     <main class="main">
-        <div class="container hero__selected">
-            <div class="hero__img">
-                <img src="./images/icon-star.svg" alt="icon-start">
-            </div>
-            <h1>
+        <section class="main__card card animate__animated animate__zoomIn">
+            <img src="./images/icon-star.svg" alt="" class="card__icon">
+            <h1 class="card__title">
                 How did we do?
             </h1>
-            <p>
-                Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+            <p class="card__paragraph">
+                Please let us know how we did with your support request. All feedback is appreciated to help us improve our offereing!
             </p>
-            <div class="hero__container">
-                <span class="number">1</span>
-                <span class="number">2</span>
-                <span class="number">3</span>
-                <span class="number">4</span>
-                <span class="number">5</span>
+            <div class="card__container">
+                <button class="card__button" id="1">1</button>
+                <button class="card__button" id="2">2</button>
+                <button class="card__button" id="3">3</button>
+                <button class="card__button" id="4">4</button>
+                <button class="card__button" id="5">5</button>
             </div>
-            <button class="submit">Submit</button>
-        </div>
-        <div class="container hero__thanks">
-            <img src="./images/illustration-thank-you.svg" alt="illustration-thank-you">
-            <span class="selected">
-                You selected
-                <span id="selected-number"></span>
-                out of 5
-            </span>
-            <h2>
+            <button class="card__submit">
+                Submit
+            </button>
+        </section>
+        <section class="main__thanks thanks animate__animated animate__rotateInUpRight animate__slow">
+            <button class="thanks__arrow">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALdJREFUSEvtlMENwjAQBGc7oBMoAUqgElogHdEBlEA6oYMgS0GyjJNbgvNLno41c7f2Waz8aWU+myBM2I5oGIYdcJHUhdRsgyUY4XfgAHSSrq4kFBTwHjhKejUR/AtPRUx20AI+KWgFrwoKuBs1kqppfC2Oggewt+kpa1eQoIXkCZx+uTl5YdEhfzpZLJmdgxaduIO2uJNQUDmTs6SbewEsQSZJz4QNn51kt8Jon91BBJr6vwnC5N7IPEoZlO97kgAAAABJRU5ErkJggg=="/>
+            </button>
+            <img src="./images/illustration-thank-you.svg" alt="" class="thanks__img">
+            <p class="thanks__selected">
+                You selected <span id="thanks__value"></span> out of 5.
+            </p>
+            <h2 class="thanks__title">
                 Thank you!
             </h2>
-            <p>
-                We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+            <p class="thanks__paragraph">
+                We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
             </p>
-        </div>
+        </section>
     </main>
     <script src="./js/index.js"></script>
 </body>

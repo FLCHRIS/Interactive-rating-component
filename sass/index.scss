@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+$Orange: hsl(25, 100%, 52%);
+$White: hsl(0, 0%, 100%);
+$LightGrey: hsl(210, 21%, 16%);
+$MediumGrey: hsl(215, 23%, 14%);
+$DarkBlue: hsl(212, 11%, 53%);
+$VeryDarkBlue: hsl( 228, 11%, 8%);
+$fontOverpass: 'Overpass', sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+.main {
+    background-color: $VeryDarkBlue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-family: $fontOverpass;
+    &__card {
+        width: 90%;
+        max-width: 375px;
+        margin: 0 auto;
+        background-color: $MediumGrey;
+        border-radius: 15px;
+        padding: 1.5em;
+        .card__icon {
+            background-color: $LightGrey;
+            padding: .8em;
+            border-radius: 50%;
+            margin-bottom: 2em;
+            transition: transform .3s ease;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        .card__title {
+            color: $White;
+            font-size: 2.7rem;
+        }
+        .card__paragraph {
+            line-height: 1.3;
+            font-size: 1.5rem;
+            color: $DarkBlue;
+            margin: 1.5em 0;
+        }
+        .card__container {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 1.5em;
+            .card__button {
+                cursor: pointer;
+                border: none;
+                background-color: $LightGrey;
+                color: $DarkBlue;
+                font-size: 1.5rem;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                line-height: 2.6;
+                transition: background-color .3s, color .3s;
+                &:hover { 
+                    background-color: $Orange;
+                    color: $White;
+                }
+            }
+            .card__button-selected {
+                background-color: $DarkBlue;
+                color: $White;
+            }
+        }
+        .card__submit {
+            cursor: pointer;
+            margin: 1.5em 0 0;
+            background-color: $Orange;
+            border: none;
+            color: $White;
+            width: 100%;
+            padding: 1em 0 .6em;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 3px;
+            border-radius: 25px;
+            transition: background-color .3s, color .3s;
+            &:hover { 
+                background-color: $White;
+                color: $Orange;
+            }
+        }
+    }
+    &__thanks {
+        width: 90%;
+        max-width: 375px;
+        margin: 0 auto;
+        background-color: $MediumGrey;
+        border-radius: 15px;
+        padding: 1.5em;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        .thanks__arrow {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: transform .3s ease-in-out;
+            img {
+                width: 25px;
+            }
+            &:hover {
+                transform: translateX(-5px);
+            }
+        }
+        .thanks__img {
+            margin: 1em 0 1.5em;
+        }
+        .thanks__selected {
+            color: $Orange;
+            background-color: $LightGrey;
+            padding: .5em 1.5em .3em;
+            border-radius: 15px;
+        }
+        .thanks__title {
+            margin: 1em 0 .5em;
+            color: $White;
+            font-size: 2.7rem;
+        }
+        .thanks__paragraph {
+            color: $DarkBlue;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+    }
+}

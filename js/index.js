@@ -1,35 +1,55 @@
-const numbers = document.querySelectorAll('.number');
-const selectedNumber = document.getElementById('selected-number');
-const hero__thanks = document.querySelector('.hero__thanks');
-const hero__selected = document.querySelector('.hero__selected');
-const button = document.querySelector('.submit');
+const buttons = document.querySelectorAll('.card__button');
+const submit = document.querySelector('.card__submit');
+const buttonRegresar = document.querySelector('.thanks__arrow');
 
-let selected = '';
+let valorSeleccionado = 0;
 
-numbers.forEach(element =>{
-    if(element.innerHTML == '1'){
-        element.addEventListener('click', ()=>{
-            selectedNumber.innerHTML = element.innerHTML;
-        });
-    }else if(element.innerHTML == '2'){
-        element.addEventListener('click', ()=>{
-            selectedNumber.innerHTML = element.innerHTML;
-        });
-    }else if(element.innerHTML == '3'){
-        element.addEventListener('click', ()=>{
-            selectedNumber.innerHTML = element.innerHTML;
-        });
-    }else if(element.innerHTML == '4'){
-        element.addEventListener('click', ()=>{
-            selectedNumber.innerHTML = element.innerHTML;
-        });
-    }else if(element.innerHTML == '5'){
-        element.addEventListener('click', ()=>{
-            selectedNumber.innerHTML = element.innerHTML;
-        });
+const eliminarSeleccionado = () => {
+    buttons.forEach(element => {
+        element.classList.remove('card__button-selected');
+    })
+}
+buttons.forEach(element => {
+    element.addEventListener('click', () => {
+        eliminarSeleccionado();
+        if(element.id == 1){
+            valorSeleccionado = element.id;
+            element.classList.add('card__button-selected');
+        }else if(element.id == 2){
+            valorSeleccionado = element.id;
+            element.classList.add('card__button-selected');
+        }else if(element.id == 3){
+            valorSeleccionado = element.id;
+            element.classList.add('card__button-selected');
+        }else if(element.id == 4){
+            valorSeleccionado = element.id;
+            element.classList.add('card__button-selected');
+        }else if (element.id == 5){
+            valorSeleccionado = element.id;
+            element.classList.add('card__button-selected');
+        }
+    })
+});
+submit.addEventListener('click', () => {
+    if(valorSeleccionado != 0) {
+        document.getElementById('thanks__value').innerHTML = valorSeleccionado;
+        document.querySelector('.card').style.display = 'none';
+        document.querySelector('.thanks').style.display = 'flex';
+    }else {
+        document.querySelector('.card').classList.remove('animate__zoomIn');
+        document.querySelector('.card').classList.add('animate__tada');
+        setTimeout(()=>{
+            document.querySelector('.card').classList.remove('animate__tada');
+        }, 2000)
     }
 });
-button.addEventListener('click', ()=>{
-    hero__selected.style.display = 'none';
-    hero__thanks.style.display = 'flex';
+buttonRegresar.addEventListener('click', () => {
+
+    valorSeleccionado = 0;
+    eliminarSeleccionado();
+    document.querySelector('.card').classList.add('animate__zoomIn');
+    document.querySelector('.card').classList.remove('animate__tada');
+
+    document.querySelector('.card').style.display = 'block';
+    document.querySelector('.thanks').style.display = 'none';
 });

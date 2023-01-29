@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
@@ -43,6 +43,9 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - JS
+- BEM
+- Animation
+- SASS/SCSS
 
 ## Author
 - Frontend Mentor [Christian](https://www.frontendmentor.io/profile/flchris)
